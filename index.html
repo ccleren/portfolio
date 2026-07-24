@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carmen Clemente | Cloud & DevOps Engineer</title>
+    <meta name="description" content="Portfolio de Carmen Clemente, especializada en Cloud Computing y DevOps: AWS, contenedores, automatización, observabilidad e inteligencia artificial.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="top-nav" id="topNav">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-mark">CC</span>
+                <span class="brand-name">Carmen Clemente</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#about" data-i18n="nav.about">Sobre mí</a>
+                <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+                <a href="#education" data-i18n="nav.education">Formación</a>
+                <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+                <a href="#contact" data-i18n="nav.contact">Contacto</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="langToggle" type="button" aria-label="Switch language">
+                    <span id="langLabel">EN</span>
+                </button>
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIconMoon"></i>
+                    <i class="fas fa-sun" id="themeIconSun"></i>
+                </button>
+                <button class="icon-btn nav-burger" id="navBurger" type="button" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-glow"></div>
+
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <div class="hero-badge">
+                    <i class="fas fa-server"></i>
+                    <span data-i18n="hero.badge">Cloud Computing · DevOps · AWS</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span data-i18n="hero.titlePre">Construyendo </span><span class="gradient-text" data-i18n="hero.titleAccent">arquitecturas cloud</span><span data-i18n="hero.titlePost"> y proyectos DevOps</span>
+                </h1>
+
+                <p class="hero-description" data-i18n="hero.description">
+                    Proyectos prácticos centrados en AWS, automatización, contenedores, observabilidad, seguridad cloud y despliegues escalables.
+                </p>
+
+                <div class="hero-signature">
+                    <span class="signature-name">Carmen Clemente</span>
+                    <span class="signature-dot">·</span>
+                    <span class="signature-role" data-i18n="hero.role">Cloud & DevOps Engineer</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                        <i class="fas fa-diagram-project"></i>
+                        <span data-i18n="hero.ctaProjects">Ver proyectos</span>
+                    </button>
+                    <button class="btn btn-outline" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        <span data-i18n="hero.ctaContact">Contactar</span>
+                    </button>
+                </div>
+
+                <div class="tech-row">
+                    <span class="tech-pill"><i class="fab fa-aws"></i> AWS</span>
+                    <span class="tech-pill"><i class="fab fa-google"></i> Google Cloud</span>
+                    <span class="tech-pill"><i class="fa-brands fa-microsoft"></i> Azure</span>
+                    <span class="tech-pill"><i class="fab fa-docker"></i> Docker</span>
+                    <span class="tech-pill"><i class="fas fa-cube"></i> Kubernetes</span>
+                    <span class="tech-pill"><i class="fas fa-layer-group"></i> Terraform</span>
+                    <span class="tech-pill"><i class="fas fa-code-branch"></i> Jenkins</span>
+                    <span class="tech-pill"><i class="fas fa-database"></i> PostgreSQL</span>
+                </div>
+            </div>
+
+            <div class="hero-visual fade-in-delay">
+                <div class="terminal-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="terminal-title" data-i18n="hero.terminalLabel">whoami.yml</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="code-line"><span class="t-comment">#</span> <span class="t-comment">whoami</span></div>
+                        <div class="code-line"><span class="t-key">name</span>: <span class="t-string">Carmen Clemente</span></div>
+                        <div class="code-line"><span class="t-key">role</span>: <span class="t-string">Cloud & DevOps Engineer</span></div>
+                        <div class="code-line"><span class="t-key">cloud</span>: [<span class="t-string">AWS</span>, <span class="t-string">GCP</span>, <span class="t-string">Azure</span>]</div>
+                        <div class="code-line"><span class="t-key">devops</span>: [<span class="t-string">Docker</span>, <span class="t-string">Kubernetes</span>, <span class="t-string">Terraform</span>, <span class="t-string">Jenkins</span>]</div>
+                        <div class="code-line"><span class="t-key">focus</span>: <span class="t-string">secure, scalable, automated platforms</span></div>
+                        <div class="code-line blink-line"><span class="t-cursor">▍</span></div>
+                    </div>
+                </div>
+
+                <div class="stat-strip">
+                    <div class="stat-item">
+                        <span class="stat-number" id="statProjectCount">4</span>
+                        <span class="stat-label" data-i18n="hero.stats.projects">Proyectos prácticos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label" data-i18n="hero.stats.cloud">Proveedores cloud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" onclick="scrollToSection('about')">
+            <span data-i18n="hero.scroll">Explorar proyectos</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-text">
+                <div class="section-badge">
+                    <i class="fas fa-user"></i>
+                    <span data-i18n="about.badge">Sobre mí</span>
+                </div>
+                <h2 class="section-title" data-i18n="about.title">¿Quién soy?</h2>
+                <div class="title-underline underline-left"></div>
+                <p class="about-paragraph" data-i18n="about.text">
+                    De resolver incidencias en sistemas de producción a construir la infraestructura que los sostiene. Más de 4 años de experiencia en soporte L2 sobre sistemas críticos: bases de datos Oracle y PostgreSQL, análisis de logs y trazas en GCP, y automatización con Kubernetes y Amazon S3. En Vodafone reduje las reaperturas de tickets en un 32% documentando soluciones paso a paso, gestionando picos de hasta 60 tickets/día sin perder calidad de servicio. Ahora combino esa base con formación intensiva en Cloud Computing y DevOps, y la certificación Microsoft Azure (AZ-900), con el objetivo de dar el salto a roles de Cloud Support Engineer o DevOps/SRE.
+                </p>
+            </div>
+            <div class="about-facts">
+                <div class="fact-item">
+                    <div class="fact-icon"><i class="fas fa-location-dot"></i></div>
+                    <div>
+                        <span class="fact-label" data-i18n="about.fact1.label">Ubicación</span>
+                        <span class="fact-value" data-i18n="about.fact1.value">Málaga, España</span>
+                    </div>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-icon"><i class="fas fa-briefcase"></i></div>
+                    <div>
+                        <span class="fact-label" data-i18n="about.fact2.label">Rol actual</span>
+                        <span class="fact-value" data-i18n="about.fact2.value">Soporte y automatización cloud — MasOrange</span>
+                    </div>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-icon"><i class="fas fa-crosshairs"></i></div>
+                    <div>
+                        <span class="fact-label" data-i18n="about.fact3.label">Enfoque</span>
+                        <span class="fact-value" data-i18n="about.fact3.value">Cloud Computing & DevOps (AWS · GCP · Azure)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-briefcase"></i>
+                    <span data-i18n="experience.badge">Experiencia</span>
+                </div>
+                <h2 class="section-title" data-i18n="experience.title">Trayectoria profesional</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-period" data-i18n="experience.job1.period">2025 — Actualidad</span>
+                        <h3 data-i18n="experience.job1.role">Packaged App Development Analyst</h3>
+                        <p class="timeline-roleplain" data-i18n="experience.job1.roleplain">Soporte Cloud & SRE · GCP, automatización y observabilidad</p>
+                        <p class="timeline-company" data-i18n="experience.job1.company">MasOrange</p>
+                        <ul>
+                            <li data-i18n="experience.job1.item1">Identificación de patrones de error recurrentes mediante revisión de código en producción, proponiendo mejoras al equipo de desarrollo para reducir incidencias y aumentar la automatización.</li>
+                            <li data-i18n="experience.job1.item2">Diagnóstico y resolución de incidencias mediante análisis de trazas en GCP, incluyendo conversión de logs de formato Java a JSON.</li>
+                            <li data-i18n="experience.job1.item3">Soporte L2 de microservicios de suscripciones digitales (Netflix, HBO, Disney+ y otras suscripciones de terceros y seguros) sobre base de datos PostgreSQL.</li>
+                            <li data-i18n="experience.job1.item4">Automatización de altas y bajas mediante ficheros procesados en Amazon S3 y ejecutados en clústeres Kubernetes sobre GCP.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-period" data-i18n="experience.job2.period">2022 — 2025</span>
+                        <h3 data-i18n="experience.job2.role">Application Development Associate</h3>
+                        <p class="timeline-roleplain" data-i18n="experience.job2.roleplain">Soporte técnico L2 · CRM y sistemas de facturación</p>
+                        <p class="timeline-company" data-i18n="experience.job2.company">Tecnilógica Ecosistemas (Accenture) — Proyecto Vodafone</p>
+                        <ul>
+                            <li data-i18n="experience.job2.item1">Reducción de reaperturas de tickets en un 32% mediante documentación de soluciones paso a paso.</li>
+                            <li data-i18n="experience.job2.item2">Gestión y resolución de incidencias priorizadas por el cliente en Provisión, Facturación, CRM (Amdocs) y RMCA, con una carga sostenida de ≈35 tickets/día y picos de hasta 60, manteniendo SLA y calidad.</li>
+                            <li data-i18n="experience.job2.item3">Análisis y modificación de datos en Oracle PL/SQL y SAP para la resolución de incidencias de facturación.</li>
+                            <li data-i18n="experience.job2.item4">Soporte y capacitación a nuevos miembros del equipo mediante shadowing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span data-i18n="education.badge">Formación</span>
+                </div>
+                <h2 class="section-title" data-i18n="education.title">Educación y certificaciones</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="edu-block">
+                <h3 class="education-col-heading" data-i18n="education.eduHeading">Educación</h3>
+                <div class="edu-grid">
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4 data-i18n="education.edu1.title">Bootcamp Cloud Computing & DevOps</h4>
+                            <p class="edu-place" data-i18n="education.edu1.place">Blockstellar</p>
+                            <span class="edu-period" data-i18n="education.edu1.period">2025 — Actualidad</span>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4 data-i18n="education.edu2.title">FP Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</h4>
+                            <p class="edu-place" data-i18n="education.edu2.place">MEDAC</p>
+                            <span class="edu-period" data-i18n="education.edu2.period">Sept. 2023 — Jun. 2025</span>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4 data-i18n="education.edu3.title">FP Superior en Administración de Sistemas Informáticos en Red (ASIR)</h4>
+                            <p class="edu-place" data-i18n="education.edu3.place">IES Politécnico Jesús Marín · Matrícula de honor</p>
+                            <span class="edu-period" data-i18n="education.edu3.period">2020 — 2022</span>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4 data-i18n="education.edu4.title">FP Grado Medio en Sistemas Microinformáticos en Red</h4>
+                            <p class="edu-place" data-i18n="education.edu4.place">IES Oretania</p>
+                            <span class="edu-period" data-i18n="education.edu4.period">2017 — 2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-block">
+                <h3 class="education-col-heading" data-i18n="education.certHeading">Certificaciones</h3>
+                <div class="cert-grid">
+                    <div class="cert-chip">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert1.title">Microsoft Certified: Azure Fundamentals (AZ-900)</h4>
+                            <span><span data-i18n="education.cert1.place">Microsoft</span> · <span data-i18n="education.cert1.period">Sept. 2025</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert2.title">Google IT Automation with Python</h4>
+                            <span><span data-i18n="education.cert2.place">Google</span> · <span data-i18n="education.cert2.period">Sept. 2025</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip cert-extra">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert3.title">Registered Scrum Basics™</h4>
+                            <span><span data-i18n="education.cert3.place">Scrum Inc.</span> · <span data-i18n="education.cert3.period">Ago. 2025</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip cert-extra">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert4.title">Intermediate Python</h4>
+                            <span><span data-i18n="education.cert4.place">Udacity</span> · <span data-i18n="education.cert4.period">Jul. 2025</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip cert-extra">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert5.title">Integración de Aplicaciones en Flutter con Firebase</h4>
+                            <span><span data-i18n="education.cert5.place">OpenWebinars</span> · <span data-i18n="education.cert5.period">May. 2025</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip cert-extra">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert6.title">Curso de Power BI intermedio</h4>
+                            <span><span data-i18n="education.cert6.place">OpenWebinars</span> · <span data-i18n="education.cert6.period">Ene. 2025</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert7.title">Inteligencia Artificial Generativa y Cloud Computing</h4>
+                            <span><span data-i18n="education.cert7.place">DigitechFP</span> · <span data-i18n="education.cert7.period">Sept. 2024</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip cert-extra">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert8.title">Integrate Vertex AI Search and Conversation into Voice and Chat Apps</h4>
+                            <span><span data-i18n="education.cert8.place">Google</span> · <span data-i18n="education.cert8.period">Jun. 2024</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip cert-extra">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert9.title">Text Prompt Engineering Techniques</h4>
+                            <span><span data-i18n="education.cert9.place">Google</span> · <span data-i18n="education.cert9.period">May. 2024</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip cert-extra">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert10.title">People Leadership Credential – Chapter 1: Connect</h4>
+                            <span><span data-i18n="education.cert10.place">Accenture</span> · <span data-i18n="education.cert10.period">May. 2024</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert11.title">AWS Cloud Quest: Cloud Practitioner</h4>
+                            <span><span data-i18n="education.cert11.place">Amazon Web Services (AWS)</span> · <span data-i18n="education.cert11.period">Abr. 2024</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip cert-extra">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert12.title">MERN: Advanced MERN Development</h4>
+                            <span><span data-i18n="education.cert12.place">Skillsoft</span> · <span data-i18n="education.cert12.period">Jun. 2022</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert13.title">Curso de fundamentos de PL/SQL</h4>
+                            <span><span data-i18n="education.cert13.place">OpenWebinars</span> · <span data-i18n="education.cert13.period">Abr. 2022</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert14.title">Curso de Jenkins</h4>
+                            <span><span data-i18n="education.cert14.place">OpenWebinars</span> · <span data-i18n="education.cert14.period">Abr. 2022</span></span>
+                        </div>
+                    </div>
+                    <div class="cert-chip">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4 data-i18n="education.cert15.title">CCNA Routing and Switching</h4>
+                            <span><span data-i18n="education.cert15.place">Cisco Networking Academy</span> · <span data-i18n="education.cert15.period">Jun. 2021</span></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="cert-toggle" id="certToggle" type="button">
+                    <span id="certToggleLabel" data-i18n="education.certToggleShow">Ver todas las certificaciones</span>
+                    <i class="fas fa-chevron-down" id="certToggleIcon"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-diagram-project"></i>
+                    <span data-i18n="projects.badge">Proyectos</span>
+                </div>
+                <h2 class="section-title" data-i18n="projects.title">Soluciones cloud destacadas</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Proyectos prácticos de AWS, DevOps, contenedores, datos, observabilidad e IA.</p>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    <span data-i18n="filter.all">Todos</span>
+                </button>
+                <button class="filter-btn" data-filter="basic">
+                    <i class="fas fa-star"></i>
+                    <span data-i18n="filter.basic">Básico</span>
+                </button>
+                <button class="filter-btn" data-filter="advanced">
+                    <i class="fas fa-rocket"></i>
+                    <span data-i18n="filter.advanced">Avanzado</span>
+                </button>
+                <button class="filter-btn" data-filter="professional">
+                    <i class="fas fa-crown"></i>
+                    <span data-i18n="filter.professional">Profesional</span>
+                </button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    <span data-i18n="contact.badge">Contacto</span>
+                </div>
+                <h2 class="section-title" data-i18n="contact.title">¿Hablamos?</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Abierta a oportunidades y colaboraciones en cloud y DevOps.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3 data-i18n="contact.email.title">Email</h3>
+                    <p>cclementerentero@gmail.com</p>
+                    <a href="mailto:cclementerentero@gmail.com" class="contact-link" data-i18n="contact.email.action">Enviar email</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <h3 data-i18n="contact.linkedin.title">LinkedIn</h3>
+                    <p data-i18n="contact.linkedin.text">Perfil profesional</p>
+                    <a href="https://www.linkedin.com/in/carmen-clemente-rentero/" target="_blank" rel="noopener noreferrer" class="contact-link" data-i18n="contact.linkedin.action">Ver perfil</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <h3 data-i18n="contact.github.title">GitHub</h3>
+                    <p data-i18n="contact.github.text">Repositorios y código</p>
+                    <a href="https://github.com/ccleren" target="_blank" rel="noopener noreferrer" class="contact-link" data-i18n="contact.github.action">Ver GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container" id="modalImageContainer" title="Ver imagen completa">
+                    <img id="modalImage" src="" alt="" class="modal-image">
+                    <div class="modal-image-hint"><i class="fas fa-up-right-and-down-left-from-center"></i></div>
+                </div>
+                <div class="modal-info">
+                    <p id="modalDescription"></p>
+                    <div class="modal-technologies" id="modalTechnologies"></div>
+                    <div class="modal-buttons">
+                        <a id="modalGithub" href="#" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="project.viewCode">Ver código</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <span class="brand-mark">CC</span>
+                        <span class="brand-name" data-i18n="footer.brand.title">Cloud & DevOps Portfolio</span>
+                    </div>
+                    <p data-i18n="footer.brand.text">Arquitecturas cloud, automatización y proyectos prácticos en AWS.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-i18n="footer.nav.title">Navegación</h4>
+                        <ul>
+                            <li><a href="#hero" data-i18n="footer.nav.home">Inicio</a></li>
+                            <li><a href="#about" data-i18n="footer.nav.about">Sobre mí</a></li>
+                            <li><a href="#experience" data-i18n="footer.nav.experience">Experiencia</a></li>
+                            <li><a href="#education" data-i18n="footer.nav.education">Formación</a></li>
+                            <li><a href="#projects" data-i18n="footer.nav.projects">Proyectos</a></li>
+                            <li><a href="#contact" data-i18n="footer.nav.contact">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-i18n="footer.social.title">Redes</h4>
+                        <ul>
+                            <li><a href="https://github.com/ccleren" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/carmen-clemente-rentero/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2026 Carmen Clemente | Portfolio Cloud & DevOps.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="projects-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
